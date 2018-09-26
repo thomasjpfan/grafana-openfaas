@@ -5,5 +5,4 @@ docker service create --name grafana \
 	-e GF_AUTH_ANONYMOUS_ORG_NAME="Main Org." \
 	-e GF_AUTH_ANONYMOUS_ORG_ROLE=View \
 	-e GF_AUTH_DISABLE_LOGIN_FORM=true \
-	-e GF_AUTH_DISABLE_SIGNOUT_MENU=true \
 	thomasjpfan/grafana-openfaas
