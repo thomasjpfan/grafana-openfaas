@@ -10,7 +10,7 @@ jobs:
       - run:
           name: Build Image
           command: >
-            docker image build -t thomasjpfan/grafana-openfaas:$(TAG)
+            docker image build -t thomasjpfan/grafana-openfaas:master
             --label "org.opencontainers.image.revision=$(CIRCLE_SHA1)" .
       - deploy:
           name: Push to Docker Hub
