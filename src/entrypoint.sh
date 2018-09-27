@@ -37,23 +37,19 @@ EOF
 # Import databoards
 for f in /src/dashboards/*; do
 	case "$f" in
-	*.json)
-		echo "{ \"dashboard\": $(cat $f), \"overwrite\":true }" >/tmp/dashboard_data.json
-		sed -i "s@\${DS_FAAS}@OpenFaas@g" /tmp/dashboard_data.json
-		curl \
-			-X POST -H 'Content-Type: application/json;charset=UTF-8' \
-			-d @/tmp/dashboard_data.json \
-			"http://${grafana_admin_user}:${grafana_admin_password}@localhost:3000/api/dashboards/db"
-		;;
-	*)
-		echo "$0; ignoring $f"
-		;;
+		*.json)
+			echo "{ \"dashboard\": $(cat $f), \"overwrite\":true }" >/tmp/dashboard_data.json
+			sed -i "s@\${DS_FAAS}@OpenFaas@g" /tmp/dashboard_data.json
+			curl \
+				-X POST -H 'Content-Type: application/json;charset=UTF-8' \
+				-d @/tmp/dashboard_data.json \
+				"http://${grafana_admin_user}:${grafana_admin_password}@localhost:3000/api/dashboards/db"
+			;;
+		*)
+			echo "$0; ignoring $f"
+			;;
 	esac
 done
-
-curl \
-	-X POST -H 'Content-Type: application/json' \
-	"http://${grafana_admin_user}:${grafana_admin_password}@localhost:3000/api/user/stars/dashboard/1"
 
 jobs
 
