@@ -63,17 +63,6 @@
       "height": 213,
       "panels": [
         {
-          "content": "\n\n![](https://www.openfaas.com/assets/images/logo.png)",
-          "height": "",
-          "id": 11,
-          "links": [],
-          "mode": "markdown",
-          "span": 2,
-          "title": "",
-          "transparent": true,
-          "type": "text"
-        },
-        {
           "cacheTimeout": null,
           "colorBackground": true,
           "colorValue": false,
@@ -755,17 +744,7 @@
       "2h",
       "1d"
     ],
-    "time_options": [
-      "5m",
-      "15m",
-      "1h",
-      "6h",
-      "12h",
-      "24h",
-      "2d",
-      "7d",
-      "30d"
-    ]
+    "time_options": ["5m", "15m", "1h", "6h", "12h", "24h", "2d", "7d", "30d"]
   },
   "timezone": "browser",
   "title": "OpenFaaS Serverless Dashboard",
