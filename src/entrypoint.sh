@@ -51,6 +51,10 @@ for f in /src/dashboards/*; do
 	esac
 done
 
+curl \
+	-X POST -H 'Content-Type: application/json' \
+	"http://${grafana_admin_user}:${grafana_admin_password}@localhost:3000/api/user/stars/dashboard/1"
+
 jobs
 
 fg %1
