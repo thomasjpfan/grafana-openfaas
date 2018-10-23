@@ -1,7 +1,7 @@
 FROM grafana/grafana:5.3.1
 
-COPY src work
+COPY src src
 
 ENV PROMETHEUS_ENDPOINT=http://prometheus:9090
 
-ENTRYPOINT ["/work/entrypoint.sh"]
+ENTRYPOINT ["./src/entrypoint.sh"]
