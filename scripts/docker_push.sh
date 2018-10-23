@@ -7,6 +7,8 @@ master_image="${docker_hub_name}:master"
 latest_image="${docker_hub_name}:latest"
 release_image="${docker_hub_name}:${release_tag}"
 
+echo "Release tag: ${release_image}"
+
 echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
 
 docker tag "$master_image" "$latest_image"
