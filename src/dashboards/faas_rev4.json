@@ -272,7 +272,7 @@
               "to": "null"
             }
           ],
-          "span": 4,
+          "span": 6,
           "sparkline": {
             "fillColor": "rgba(31, 118, 189, 0.18)",
             "full": true,
@@ -744,7 +744,17 @@
       "2h",
       "1d"
     ],
-    "time_options": ["5m", "15m", "1h", "6h", "12h", "24h", "2d", "7d", "30d"]
+    "time_options": [
+      "5m",
+      "15m",
+      "1h",
+      "6h",
+      "12h",
+      "24h",
+      "2d",
+      "7d",
+      "30d"
+    ]
   },
   "timezone": "browser",
   "title": "OpenFaaS Serverless Dashboard",
